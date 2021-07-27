@@ -8,22 +8,38 @@ public class IntegerInput2 {
 	
 	public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);	
-  
-	int b[]  = new int[0];
-	int a [] = new int[10];
-	for(int i=0; i<a.length;i++) {
-		System.out.println("a["+i+"]");
+  System.out.println("enter the data");
+      int n=sc.nextInt();
+	
+	int a [] = new int[n];
+	for(int i=0; i<n;i++) {
+		System.out.println("enter the number:"+(i+1));
 		a[i]=sc.nextInt();
 	}
 	
-	System.out.println("enter the number:");
-	for(int i=0; i<a.length;i++) {
-		System.out.println("a["+i+"]");
-		b[i]=sc.nextInt();
+	System.out.println("enter the find number:");
+	int find=sc.nextInt();
+	
+	boolean check=false;
+	for(int i=0; i<n; i++) {
+	
+		if(a[i]==find) {
+		check=true;
+			break;
+			}
+	}
+		if(  check==true) {
+			
+			System.out.println("number is present:"+find);
+		}
+		else {
+			System.out.println("number is not present:" +find);
+		}
 	}
 	
-System.out.println();
+	
+
 	
 	}
 
-}
+
